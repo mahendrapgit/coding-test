@@ -1,0 +1,18 @@
+<h2>Cats</h2>
+<div class="div-table">
+    <div class="div-table-row">
+        <div class="div-table-col">SN</div>
+        <div  class="div-table-col">Image</div>        
+     </div>
+<div>
+<div class="div-table-row" *ngFor="let cat of cats;  let sn = index">
+    <div class="div-table-col">{{sn+1}} </div>
+    <div class="div-table-col"><img src="{{cat.url}}" width="100"/></div>       
+</div>
+
+<div class="pagination">
+    <a (click)="this.setPage(false)">Prev</a> <a (click)="this.setPage(true)">Next</a>
+</div>
+
+</div>
+</div>
